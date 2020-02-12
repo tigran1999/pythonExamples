@@ -7,30 +7,30 @@ class Arguments:
     self.c = c
 
 
-def diskremenant(a, b, c):
+def discriminant(a, b, c):
 	
 	if a == 0:
 		if b != 0:
 			print(c/b)
 			return
 		else:
-			print("lucum goytuyun chuni")
+			print("there is't any solution")
 			return
 		
-	deskriminant = (b ** 2) - (4 * a * c)
+	discriminant = (b ** 2) - (4 * a * c)
 	
-	if deskriminant > 0:
-		print("uni erku lucum")
+	if discriminant > 0:
+		print("there is two solutions")
 		x1 = (b + math.sqrt((deskriminant))) / (2 * a)
 		x2 = (b - math.sqrt((deskriminant))) / (2 * a)
 		print(x1)
 		print(x2)
-	elif deskriminant == 0:
-		print("uni mek lucum")
+	elif discriminant == 0:
+		print("there is one solution")
 		x = -b / 2 * a
 		print("x="+x)
 	else:
-		print("lucum goytuyun chuni")
+		print("there is't any solution")
 
 argumentsList = [] 
 
@@ -38,4 +38,4 @@ argumentsList.append( Arguments(0, 0, 0))
 argumentsList.append( Arguments(1, 4, 2)) 
 
 for argumnets in argumentsList: 
-	diskremenant(argumnets.a, argumnets.b, argumnets.c)
+	discriminant(argumnets.a, argumnets.b, argumnets.c)
